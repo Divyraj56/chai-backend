@@ -22,4 +22,13 @@ app.use(express.static("public"))
 // to perform CURD operations on the cookies , accesing brower cookies on server
 app.use(cookieParser())
 
+// routes import 
+
+import userRouter from './routes/user.routes.js' 
+
+// router declarations
+// for routes we will use app.use for middleware        
+
+app.use("/api/v1/users",userRouter)
+
 export { app };
